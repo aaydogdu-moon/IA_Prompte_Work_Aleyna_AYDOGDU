@@ -314,7 +314,7 @@ J’ai reconstruit le dataset en faisant plus attention à la cohérence :
 Cette seconde version a mieux fonctionné.  
 Le LoRA arrivait davantage à reconnaître et réinjecter le langage visuel que je cherchais.
 
-**exemples:** [Voir le PDF](TEST_ex2)
+**exemples:** [Voir le PDF](TEST_ex2.pdf)
 
 ## Le projet final:
 
@@ -322,7 +322,7 @@ Le LoRA arrivait davantage à reconnaître et réinjecter le langage visuel que 
 
 ## Narration de l’univers
 
-[Voir la narration complète (PDF)](pdf/narration-univers.pdf)
+[Voir la narration complète (PDF)](Projet_univers_texte.pdf)
 
 
 
