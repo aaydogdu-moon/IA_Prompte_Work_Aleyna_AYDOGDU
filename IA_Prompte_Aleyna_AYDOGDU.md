@@ -152,7 +152,7 @@ Le style général évoque une peinture contemporaine aux formes simplifiées, a
 
 **résultat:**
 
-<img title="" src="file:///Users/aleyna/Desktop/WS_IA/SRC/Screenshot%202026-03-11%20at%2019.47.05.png" alt="texte alternatif" width="656">
+<img title="" src="SRC/Screenshot%202026-03-11%20at%2019.47.05.png" alt="texte alternatif" width="656">
 
 ### Outils utilisés
 
@@ -160,7 +160,7 @@ Le style général évoque une peinture contemporaine aux formes simplifiées, a
 
 **image de référence:**
 
-![texte alternatif](/Users/aleyna/Desktop/WS_IA/SRC/Screenshot%202026-03-11%20at%2019.47.42.png)
+![texte alternatif](SRC/Screenshot%202026-03-11%20at%2019.47.42.png)
 
 **prompte:**
 
@@ -173,7 +173,7 @@ L’image dégage une atmosphère sobre, silencieuse et réaliste, avec une impr
 
 **résultat:**
 
-![texte alternatif](/Users/aleyna/Desktop/WS_IA/SRC/Gemini_Generated_Image_m1sehlm1sehlm1se.png)
+![texte alternatif](SRC/Gemini_Generated_Image_m1sehlm1sehlm1se.png)
 
 ### Outils utilisés
 
@@ -221,7 +221,7 @@ J’ai constitué un corpus d’environ vingt images de moi dans :
 - différentes accessoires ;
 - différentes lumières.
 
-**dataset:**    [dataset_ALN](chemin/du/dossier/)
+**dataset:**    [dataset_ALN](SRC_ex1)
 
 ### Trigger word
 
@@ -241,7 +241,7 @@ Comme je connais mon propre visage, mes expressions et mes traits, il m’était
 - ce qu’il confondait ( les grains de beauté, car les selfies change leurs positions);
 - ce qu’il généralise.
 
-**exemples:**    [Voir le PDF](pdf/abc-dick-extrait.pdf)
+**exemples:**    [Voir le PDF](TEST_ex1.pdf)
 
 # Exercice 3
 
@@ -251,7 +251,7 @@ Comme je connais mon propre visage, mes expressions et mes traits, il m’était
 
 Pour ce troisième exercice, j’ai choisi un **univers de pointillisme noir et blanc**.
 
-**dataset:** [dataset_PTME](chemin/du/dossier/)
+**dataset:** [dataset_PTME](SRC_ex2)
 
 ### Trigger word
 
@@ -314,7 +314,7 @@ J’ai reconstruit le dataset en faisant plus attention à la cohérence :
 Cette seconde version a mieux fonctionné.  
 Le LoRA arrivait davantage à reconnaître et réinjecter le langage visuel que je cherchais.
 
-**exemples:** [Voir le PDF](pdf/abc-dick-extrait.pdf)
+**exemples:** [Voir le PDF](TEST_ex2)
 
 ## Le projet final:
 
