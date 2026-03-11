@@ -139,7 +139,7 @@ L’objectif était double :
 
 **image de référence:**
 
-<img title="" src="file:///Users/aleyna/Desktop/WS_IA/SRC/Screenshot%202026-03-11%20at%2019.46.29.png" alt="texte alternatif" width="652">
+<img title="" src="SRC/Screenshot%202026-03-11%20at%2019.46.29.png" alt="texte alternatif" width="652">
 
 **prompte:** 
 
