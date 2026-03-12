@@ -328,8 +328,8 @@ Le LoRA arrivait davantage à reconnaître et réinjecter le langage visuel que 
 
 ## Moodboard de l’univers
 
-[Moodboard ](Moodboard_with_details.pdf)  
-[Link to the Moodboard ][Moodboard_with_details.pdf](https://docs.google.com/spreadsheets/d/1C5wHsOxb5NSeg9QJIfjpQOHnOO8ovJvjfFN-Q9QtR84/edit?usp=sharing) 
+[Moodboard](Moodboard_with_details.pdf)  
+[Link to the Moodboard](https://docs.google.com/spreadsheets/d/1C5wHsOxb5NSeg9QJIfjpQOHnOO8ovJvjfFN-Q9QtR84/edit?usp=sharing) 
 
 
 
