@@ -332,7 +332,188 @@ Le LoRA arrivait davantage à reconnaître et réinjecter le langage visuel que 
 [Link to the Moodboard](https://docs.google.com/spreadsheets/d/1C5wHsOxb5NSeg9QJIfjpQOHnOO8ovJvjfFN-Q9QtR84/edit?usp=sharing) 
 
 
+# Ligne directrice
 
-## Choix de la ligne directrice
+Après plusieurs explorations, j’ai choisi de me concentrer sur une approche narrative à travers un storyboard.  
+L’objectif était de traduire mon univers dystopique en une séquence d’images cohérentes, capables de transmettre une tension politique et sociale sans texte, uniquement par le visuel.
 
-Dans le temps attribué pour ce projet, je choisis de me concentrer sur une seule partie de cet univers afin de la développer de manière plus précise et cohérente. Je ne peux pas traiter l’ensemble du système visuel en si peu de temps, donc je me focalise sur un axe spécifique qui permet d’exprimer clairement l’atmosphère dystopique et les logiques de contrôle de cet environnement.
+# Recherche et expérimentations LoRA
+
+Au début du projet, j’ai exploré plusieurs directions en entraînant différents LoRA.
+
+## 1. LoRA — Lumière et ambiance
+
+J’ai d’abord tenté d’entraîner un LoRA sur l’ambiance lumineuse de la ville (lumière froide, diffuse, homogène).  
+Cependant, avant de faire mes tests, je me suis rendu compte que **Flux.1 parvenait déjà à générer ce type d’ambiance sans entraînement spécifique**.
+
+→ J’ai donc décidé d’abandonner cette piste pour me concentrer sur des éléments plus complexes.
+
+**dataset:** [dataset_CITY](chemin/du/dossier/)
+
+## 2. LoRA — Architecture / Buildings
+
+Je me suis ensuite concentrée sur l’architecture :
+
+- bâtiments brutalistes
+- structures géométriques
+- formes parfois atypiques
+- façades lisses et répétitives
+
+J’ai entraîné un LoRA avec plus de 20 images pour obtenir une cohérence visuelle plus forte.
+
+**dataset:** [dataset_ARCHI](chemin/du/dossier/)
+
+### Trigger word
+
+`BLD`
+
+## 3. LoRA — Écrans / Surveillance
+
+En parallèle, j’ai développé un LoRA autour des écrans :
+
+- murs d’écrans
+- écrans intégrés à l’architecture
+- écrans avec des yeux
+- dispositifs de surveillance
+
+Ce dataset mélangeait volontairement plusieurs types d’images pour tester ce que le modèle retenait réellement.
+
+Au début (6–7 images), le modèle ne comprenait pas correctement.  
+Après réentraînement avec plus de 20 images, les résultats étaient plus cohérents.
+
+**dataset:** [dataset_TV](chemin/du/dossier/)
+
+### Trigger word
+
+`TVEY`
+
+## 4. Tests et comparaisons
+
+J’ai effectué plusieurs types de tests :
+
+- Flux.1 sans LoRA
+- Flux.1 avec 1 LoRA
+- Flux.1 avec 2 LoRA combinés
+
+Et aussi :
+
+- LoRA buildings + LoRA écrans
+- LoRA écrans + LoRA buildings
+
+L’objectif était d’observer :
+
+- ce que chaque LoRA apporte réellement
+- comment ils interagissent entre eux
+- ce que le modèle oublie ou déforme
+
+Observation importante :  
+Un LoRA trop entraîné peut faire perdre au modèle ses connaissances de base (ex : caméras de surveillance réalistes).
+
+recherches :  
+[Images](./recherches.pdf)
+
+On se rend encore compte des stéréotypes malgré les LoRA (par exemple pour les abtiments il a pour habitude de faire des personnes racisé ou des banlieue pauvre contrairement à la ville où c'est souvent des personnes blanches très bien habillé ect. )
+
+# Références
+
+- *1984*, George Orwell
+- *ABC Dick*, Ariel Kyrou
+- *Brazil*, Terry Gilliam
+- *The Maze Runner*
+
+Ces références m’ont permis de construire :
+
+- une réflexion sur la surveillance
+- un univers contrôlé mais visuellement propre et vide
+
+# Production finale
+
+Pour la phase finale, mon intention initiale était de produire un storyboard en 8 images, afin de raconter une situation politique simple inscrite dans l’univers que j’ai développé.
+
+L’objectif de ce storyboard était de montrer un système de surveillance omniprésent, visible mais normalisé, et de créer un contraste entre une violence réelle et une apparente banalité du quotidien.
+
+Cependant, au cours des tests, je me suis confrontée à une limite technique importante :  
+Flux.1 ne parvient pas à générer une suite d’images cohérentes entre elles et ça aussi avec le même prompte:
+
+```prompt
+realistic dystopian comic storyboard, single image with eight square panels arranged in two rows, clean grid layout,
+
+neutral modern city environment, geometric but slightly asymmetrical architecture, smooth facades, embedded digital screens, surveillance cameras everywhere,
+
+cold neutral color palette: white, grey, black, muted tones, minimal colors, only bright red jacket and subtle blue/red police lights,
+
+silent oppressive atmosphere, realistic lighting, clean composition, no text anywhere
+
+panel 1: café terrace, six friends sitting at small outdoor table holding coffee cups, neutral polite smiles, man wearing bright red jacket standing beside chair about to sit
+
+panel 2: view from inside café through glass window, terrace visible in foreground with group including red jacket man, background shows distant police pointing weapons at small child holding coloring book, parents standing silently behind, police car with faint blue and red lights, nobody reacting
+
+panel 3: closer shot terrace table, all seven seated, identical neutral smiles, perfect routine atmosphere
+
+panel 4: over shoulder view behind red jacket man, smartphone showing social media video of distressed people asking for help, his thumb pressing like
+
+panel 5: medium close shot of red jacket man looking left and right nervously, others calm
+
+panel 6: top surveillance camera view with interface overlay, police aiming at red jacket man, others frozen
+
+panel 7: wide shot café terrace, six friends remain seated, one empty chair visible, without the man in red in the empty chair
+
+panel 8: close shot table again, identical smiles, empty chair, silence, without the man in red
+
+realistic photography style, cold soft daylight, minimal shadows, sharp details, unsettling calm mood
+```
+
+Les problèmes rencontrés étaient les suivants :
+
+- perte de continuité entre les images (personnages, environnement, cadrage)
+- changements de style involontaires (notamment un rendu parfois trop “BD”)
+- difficulté à maintenir une narration stable
+- incohérences encore plus fortes lorsque chaque image était générée avec un prompt différent
+
+J’ai également testé avec ChatGPT (génération d’images), en utilisant un prompt unique pour toute la séquence.  
+Les résultats restaient imparfaits (certaines incohérences, visuels parfois “étranges”), mais il y avait malgré tout une meilleure continuité narrative entre les images.
+
+Face à ces contraintes et au temps limité du workshop, j’ai décidé de réorienter ma production finale.
+
+Plutôt que de forcer un storyboard incomplet ou incohérent, j’ai choisi de me concentrer sur :
+
+- des recherches visuelles de l’environnement
+- des tests de génération autour des éléments clés de mon univers (architecture, écrans, surveillance)
+- des fragments issus du storyboard initial
+
+La production finale présentée correspond donc à un ensemble de visuels exploratoires, qui traduisent :
+
+- l’ambiance générale de l’univers
+- les logiques de surveillance
+- la normalisation des comportements
+- le contraste entre contrôle et banalité
+
+Le storyboard reste une intention de départ forte, mais il est ici montré à travers des essais et des extraits plutôt qu’une narration complète.
+
+# Visuels finaux
+
+Images de recherches éxposée durant le workshop :  
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_0.jpg?msec=1773780907886)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_1.jpg?msec=1773780799862)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_2.jpg?msec=1773780809243)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_3.jpg?msec=1773780815550)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_4.jpg?msec=1773780828003)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_5.jpg?msec=1773780836545)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_6.jpg?msec=1773780843728)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_7.jpg?msec=1773780853110)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_8.jpg?msec=1773780860907)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_9.jpg?msec=1773780866634)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_11.jpg?msec=1773780873420)
+
+![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_12.jpg?msec=1773780880389)
