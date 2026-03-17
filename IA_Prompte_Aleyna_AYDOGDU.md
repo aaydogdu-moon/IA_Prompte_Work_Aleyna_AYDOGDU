@@ -348,7 +348,7 @@ Cependant, avant de faire mes tests, je me suis rendu compte que **Flux.1 parven
 
 → J’ai donc décidé d’abandonner cette piste pour me concentrer sur des éléments plus complexes.
 
-**dataset:** [dataset_CITY](chemin/du/dossier/)
+**dataset:** [dataset_CITY](SRC_CITY)
 
 ## 2. LoRA — Architecture / Buildings
 
@@ -361,7 +361,7 @@ Je me suis ensuite concentrée sur l’architecture :
 
 J’ai entraîné un LoRA avec plus de 20 images pour obtenir une cohérence visuelle plus forte.
 
-**dataset:** [dataset_ARCHI](chemin/du/dossier/)
+**dataset:** [dataset_ARCHI](SRC_ARCHI)
 
 ### Trigger word
 
@@ -381,7 +381,7 @@ Ce dataset mélangeait volontairement plusieurs types d’images pour tester ce 
 Au début (6–7 images), le modèle ne comprenait pas correctement.  
 Après réentraînement avec plus de 20 images, les résultats étaient plus cohérents.
 
-**dataset:** [dataset_TV](chemin/du/dossier/)
+**dataset:** [dataset_TV](SRC_TV)
 
 ### Trigger word
 
@@ -494,26 +494,26 @@ Le storyboard reste une intention de départ forte, mais il est ici montré à t
 
 Images de recherches éxposée durant le workshop :  
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_0.jpg?msec=1773780907886)
+![description](IMAGES_WS_IA/Affiche_IA_0.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_1.jpg?msec=1773780799862)
+![description](IMAGES_WS_IA/Affiche_IA_0.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_2.jpg?msec=1773780809243)
+![description](IMAGES_WS_IA/Affiche_IA_2.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_3.jpg?msec=1773780815550)
+![description](IMAGES_WS_IA/Affiche_IA_3.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_4.jpg?msec=1773780828003)
+![description](IMAGES_WS_IA/Affiche_IA_4.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_5.jpg?msec=1773780836545)
+![description](IMAGES_WS_IA/Affiche_IA_5.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_6.jpg?msec=1773780843728)
+![description](IMAGES_WS_IA/Affiche_IA_6.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_7.jpg?msec=1773780853110)
+![description](IMAGES_WS_IA/Affiche_IA_7.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_8.jpg?msec=1773780860907)
+![description](IMAGES_WS_IA/Affiche_IA_8.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_9.jpg?msec=1773780866634)
+![description](IMAGES_WS_IA/Affiche_IA_9.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_11.jpg?msec=1773780873420)
+![description](IMAGES_WS_IA/Affiche_IA_11.jpg)
 
-![description](file:///Users/aleyna/Desktop/WS_IA/IMAGES_WS_IA/Affiche_IA_12.jpg?msec=1773780880389)
+![description](IMAGES_WS_IA/Affiche_IA_12.jpg)
