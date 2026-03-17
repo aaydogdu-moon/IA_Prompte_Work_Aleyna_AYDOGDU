@@ -471,7 +471,10 @@ Les problèmes rencontrés étaient les suivants :
 - incohérences encore plus fortes lorsque chaque image était générée avec un prompt différent
 
 J’ai également testé avec ChatGPT (génération d’images), en utilisant un prompt unique pour toute la séquence.  
-Les résultats restaient imparfaits (certaines incohérences, visuels parfois “étranges”), mais il y avait malgré tout une meilleure continuité narrative entre les images.
+Les résultats restaient imparfaits (certaines incohérences, visuels parfois “étranges”), mais il y avait malgré tout une meilleure continuité narrative entre les images:
+![texte alternatif](SRC/final_chatgpt1.png)
+![texte alternatif](SRC/final_chatgpt2.png)
+![texte alternatif](SRC/final_chatgpt3.png)
 
 Face à ces contraintes et au temps limité du workshop, j’ai décidé de réorienter ma production finale.
 
