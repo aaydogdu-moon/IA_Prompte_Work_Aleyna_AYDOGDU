@@ -496,7 +496,7 @@ Images de recherches éxposée durant le workshop :
 
 ![description](IMAGES_WS_IA/Affiche_IA_0.jpg)
 
-![description](IMAGES_WS_IA/Affiche_IA_0.jpg)
+![description](IMAGES_WS_IA/Affiche_IA_1.jpg)
 
 ![description](IMAGES_WS_IA/Affiche_IA_2.jpg)
 
